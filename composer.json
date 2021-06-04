@@ -1,0 +1,57 @@
+{
+  "name": "guesl/laravel-admin",
+  "description": "Laravel admin wrote by Jianfeng Li.",
+  "keywords": [
+    "admin",
+    "laravel",
+    "ACL"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/guesl/laravel-admin",
+  "support": {
+    "issues": "https://github.com/guesl/laravel-admin/issues",
+    "source": "https://github.com/guesl/laravel-admin"
+  },
+  "authors": [
+    {
+      "name": "Jianfeng Li",
+      "email": "modifyljf@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.2|^8.0",
+    "laravel/framework": "^6.0|^7.0|^8.0",
+    "ext-json": "*"
+  },
+  "require-dev": {
+    "mockery/mockery": "~0.9",
+    "phpunit/phpunit": "^8.2.2",
+    "fzaninotto/faker": "^1.8"
+  },
+  "autoload": {
+    "psr-4": {
+      "Guesl\\Query\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Guesl\\Admin\\Providers\\AdminServiceProvider",
+        "Guesl\\Admin\\Providers\\TwilioSmsServiceProvider"
+      ],
+      "aliases": {
+        "Admin": "Guesl\\Admin\\Facades\\Admin"
+      }
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
